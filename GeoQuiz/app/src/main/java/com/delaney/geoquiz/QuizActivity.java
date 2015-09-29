@@ -36,7 +36,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private int mCurrentIndex = 0;
 
-    private boolean mIsCheater;
+    public boolean[] mCheating = new boolean[mQuestionBank.length];
 
     private void updateQuestion() {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
@@ -48,7 +48,7 @@ public class QuizActivity extends AppCompatActivity {
         boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
         int messageResId = 0;
 
-        if (mIsCheater) {
+        if (mCheating[mCurrentIndex]) {
             messageResId = R.string.judgment_toast;
         } else {
             if (userPressedTrue == answerIsTrue) {
@@ -99,7 +99,6 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-                mIsCheater = false;
                 updateQuestion();
             }
         });
@@ -111,7 +110,6 @@ public class QuizActivity extends AppCompatActivity {
                 mCurrentIndex = (mCurrentIndex - 1);
                 if (mCurrentIndex < 0){
                         mCurrentIndex = mQuestionBank.length - 1;
-                        mIsCheater = false;
                         updateQuestion();
                     }
                 else {
@@ -132,7 +130,7 @@ public class QuizActivity extends AppCompatActivity {
 
         if (savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
-            mIsCheater = savedInstanceState.getBoolean(KEY_CHEATER);
+            mCheating[mCurrentIndex] = savedInstanceState.getBoolean(KEY_CHEATER);
         }
 
         updateQuestion();
@@ -143,7 +141,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         Log.i(TAG, "onSaveInstanceState");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
-        savedInstanceState.putBoolean(KEY_CHEATER, true);
+        savedInstanceState.putSerializable(KEY_CHEATER, mCheating);
     }
 
     @Override
@@ -186,7 +184,7 @@ public class QuizActivity extends AppCompatActivity {
             if (data == null) {
                 return;
             }
-            mIsCheater = CheatActivity.wasAnswerShown(data);
+            mCheating[mCurrentIndex] = CheatActivity.wasAnswerShown(data);
         }
     }
 

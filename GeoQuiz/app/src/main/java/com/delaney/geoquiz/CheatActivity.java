@@ -14,6 +14,7 @@ public class CheatActivity extends AppCompatActivity {
 
     private static final String EXTRA_ANSWER_IS_TRUE = "com.delaney.geoquiz.answer_is_true";
     private static final String EXTRA_ANSWER_SHOWN = "com.delaney.geoquiz.answer_shown";
+    private static final String KEY_BOOLEAN = "Cheat";
     private boolean mAnswerIsTrue;
 
     private TextView mAnswerTextView;
@@ -30,8 +31,19 @@ public class CheatActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(KEY_BOOLEAN, true);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(savedInstanceState != null){
+            setAnswerShownResult(savedInstanceState.getBoolean(KEY_BOOLEAN));
+        }
+
         setContentView(R.layout.activity_cheat);
 
         mAnswerIsTrue = getIntent().getBooleanExtra(EXTRA_ANSWER_IS_TRUE, false);

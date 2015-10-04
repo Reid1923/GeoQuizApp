@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\classes-2d53f102c6d8b925d8b2ceb314598799659c40df.jar" />
-    </item>
-    <item
         jar="C:\Users\Reid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -16,11 +9,11 @@
         <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-853941844c73272131d6755ebb910805a19c486e.jar" />
     </item>
     <item
-        jar="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-48fbd88458ca5af2a01aaca3cf9eaf511c47aa0c.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\classes-2d53f102c6d8b925d8b2ceb314598799659c40df.jar" />
     </item>
     <item
         jar="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
@@ -28,6 +21,13 @@
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
         <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\classes-1f3b830adfd9edd41d751e772e75ffafb81bf72f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Reid\Documents\GitHub\GeoQuizApp\GeoQuiz\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-48fbd88458ca5af2a01aaca3cf9eaf511c47aa0c.jar" />
     </item>
 
 </items>
